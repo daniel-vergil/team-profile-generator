@@ -17,7 +17,7 @@ function engineerHtml(name, id, email, gitHub) {
                     <span class="text-xl text-gray-500 dark:text-gray-400 p-2">ID: ${id}</span>
                     <span class="text-xl text-gray-500 dark:text-gray-400 p-2">Email: <a
                             href="mailto:${email}">${email}</a></span>
-                    <span class="text-xl text-gray-500 dark:text-gray-400 p-2">GitHub: <a href="https://github.com/${gitHub}">${gitHub}</a></span>
+                    <span class="text-xl text-gray-500 dark:text-gray-400 p-2">GitHub: <a href="https://github.com/${gitHub}" target="_blank">${gitHub}</a></span>
                 </div>
             </div>
         </div>

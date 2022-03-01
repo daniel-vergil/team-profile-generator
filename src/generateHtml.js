@@ -32,7 +32,7 @@
             </nav>
         </header>
         <div class="w-full mb-4 bg-gray-500">
-            <div class="flex flex-row justify-center">
+            <div class="flex flex-row flex-wrap justify-center">
                 ${data}
             </div>
         </div>

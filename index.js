@@ -110,6 +110,8 @@ function addProfile() {
     }]).then(response => {
         if (response.addMember) {
             init();
+        } else {
+            writeToFile("profile.html", profile.join(''));
         }
     })
 }

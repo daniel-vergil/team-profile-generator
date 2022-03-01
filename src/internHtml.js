@@ -10,7 +10,7 @@ function internHtml(name, id, email, schoolName) {
                                     src="/assets/img/student-icon.png" alt="Student Icon">
                                 <div class="flex flex-col p-3">
                                     <h5 class="mb-1 text-3xl font-medium text-gray-900 dark:text-white">${name}</h5>
-                                    <span class="text-2xl text-gray-500 dark:text-gray-400">Engineer</span>
+                                    <span class="text-2xl text-gray-500 dark:text-gray-400">Intern</span>
                                 </div>
                             </div>
                             <div class="w-full flex flex-col bg-white items-center">
