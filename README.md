@@ -25,6 +25,12 @@
 
 ## Usage
 <p>1. Open terminal<br>2. cd to the project root directory<br>3. Run the command 'node index.js'<br>4. Answer the prompts to generate the team profile<br>5. HTML will be generated in the '/dist' folder<br>6. To run the unit tests, cd to the project root director and run the command 'npm start test'</p>
+![team-profile-generator-prompts](https://user-images.githubusercontent.com/55717787/156231228-28d14ed5-bf80-4e46-b4c4-515bdde4b0b6.png)
+<img width="1440" alt="team-profile-html" src="https://user-images.githubusercontent.com/55717787/156231244-44846089-ee64-4c67-a47c-59a2d6685f7b.png">
+<img width="827" alt="team-profile-generator-tests" src="https://user-images.githubusercontent.com/55717787/156231255-a8739e1a-28ca-410b-9f03-7f9736ffbb0d.png">
+
+## Walk Through Video
+- [Walk Through Video](https://1drv.ms/v/s!AuncG59SV-FRgxe-JkPAdQsWheVE?e=bckO0e)
 
 ## Credits
 <p>https://jestjs.io/</p>
