@@ -3,7 +3,14 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const path = require('path');
 const generate = require('./src/generateHtml');
+const manager = require('./lib/Manager');
+const engineer = require('./lib/Engineer');
+const intern = require('./lib/Intern');
+const managerHtml = require('./src/managerHtml');
+const engineerHtml = require('./src/engineerHtml');
+const internHtml = require('./src/internHtml');
 
+var profile = [];
 // Create an array of questions for user input
 const questions = [
     "Enter your team member's name:",
@@ -61,24 +68,39 @@ function init() {
                         type: "input",
                         message: questions[6],
                         name: "officeNumber",
-                    }]).then(response => addProfile());
+                    }]).then(contactDetails => {
+                        var newManager = new manager(response.name, response.id, response.email, contactDetails.officeNumber);
+                        const managerCard = managerHtml(newManager.getName(), newManager.getId(), newManager.getEmail(), newManager.getOfficeNumber());
+                        profile.push(managerCard);
+                        addProfile();
+                    });
             } else if (response.role == "Engineer") {
                 inquirer
                     .prompt([{
                         type: "input",
                         message: questions[4],
                         name: "githubUserName",
-                    }]).then(response => addProfile());
+                    }]).then(gitHub => {
+                        var newEngineer = new engineer(response.name, response.id, response.email, gitHub.githubUserName);
+                        const engineerCard = engineerHtml(newEngineer.getName(), newEngineer.getId(), newEngineer.getEmail(), newEngineer.getGithub());
+                        profile.push(engineerCard);
+                        addProfile();
+                    });
             } else {
                 inquirer
                     .prompt([{
                         type: "input",
                         message: questions[5],
                         name: "schoolName",
-                    }]).then(response => addProfile());
+                    }]).then(schoolName => {
+                        var student = new intern(response.name, response.id, response.email, schoolName.schoolName);
+                        const internCard = internHtml(student.getName(),student.getId(), student.getEmail(), student.getSchool());
+                        profile.push(internCard);
+                        addProfile()
+                    });
             }
         })
-    }
+}
 
 function addProfile() {
     inquirer.prompt([{

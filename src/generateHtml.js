@@ -33,7 +33,7 @@
         </header>
         <div class="w-full mb-4 bg-gray-500">
             <div class="flex flex-row justify-center">
-                
+                ${data}
             </div>
         </div>
     
@@ -42,7 +42,6 @@
         </script>
         <script src="./assets/js/dashboard.js"></script>
     </body>
-    
     </html>
   `
   }
