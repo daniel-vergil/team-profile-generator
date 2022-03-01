@@ -33,7 +33,7 @@ function writeToFile(fileName, data) {
 }
 
 // Display instructions to the users
-console.log("INSTRUCTIONS: Please answer the below prompts to generate a your team profile. Team profile HTML file will be auto-generated in the dist/ folder. Thank you!");
+console.log("INSTRUCTIONS: Please answer the below prompts to generate your team profile. Team profile HTML file will be auto-generated in the dist/ folder. Thank you!");
 
 // Create a function to initialize app
 function init() {
